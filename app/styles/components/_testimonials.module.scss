@@ -1,0 +1,51 @@
+@use '../abstracts/mixins';
+@use '../abstracts/colors';
+
+.testimonials_wrapper {
+  padding: 150px 7rem;
+  text-align: center;
+
+  h2 {
+    font-family: 'FrauncesBold';
+    font-size: 1.3rem;
+    color: colors.$neutral-dark-grayish-blue;
+    letter-spacing: 4px;
+    margin-bottom: 5rem;
+  }
+  
+  .testimonials_group {
+    @include mixins.flex;
+
+    img {
+      border-radius: 50%;
+      width: 70px;
+      height: auto;
+    }
+
+    .testimonial_comment {
+      padding-block: 3rem;
+      line-height: 2rem;
+      color: colors.$neutral-very-dark-desaturated-blue;
+    }
+
+    .testimonial_name {
+      font-family: 'FrauncesBold';
+      font-size: 19px;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial_role {
+      font-size: 13px;
+      color: colors.$neutral-grayish-blue;
+    }
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .testimonials_wrapper {
+    padding: 150px 3%;
+    .testimonials_group {
+      @include mixins.flex($direction: column);
+    }
+  }
+}

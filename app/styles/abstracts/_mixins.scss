@@ -1,0 +1,25 @@
+@mixin flex($direction: row) {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: $direction;
+}
+
+@mixin hover {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+@mixin underline($color) {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  bottom: -2px;
+  left: 0px;
+  background-color: $color;
+  border-radius: 5px;
+  z-index: -1;
+  opacity: 0.3;
+}

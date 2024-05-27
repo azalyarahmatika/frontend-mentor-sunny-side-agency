@@ -1,0 +1,26 @@
+@use '../abstracts/mixins';
+@use '../abstracts/colors';
+
+.banner_wrapper {
+  @include mixins.flex;
+  gap: 0;
+  // max-width: 100vw;
+  
+  img {
+    flex-basis: 25%;
+    width: 25%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .banner_wrapper {
+    // @include mixins.flex($direction: column);
+    gap: 0;
+    flex-wrap: wrap;
+    img {
+      flex-basis: 50%;
+      width: 50%;
+    }
+  }
+}
